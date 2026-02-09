@@ -1,0 +1,113 @@
+.header {
+  height: 64px;
+  width: calc(100% - 260px);
+  position: fixed;
+  top: 0;
+  left: 260px;
+  background-color: rgba(11, 12, 21, 0.8); /* Glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl);
+  z-index: 40;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  max-width: 600px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-md);
+  color: var(--text-tertiary);
+}
+
+.searchInput {
+  width: 100%;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 2.5rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.searchShortcut {
+  position: absolute;
+  right: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.networkStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  margin-right: var(--spacing-md);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-green);
+}
+
+.statusText {
+  color: var(--accent-green);
+  font-weight: 500;
+}
+
+.iconButton {
+  color: var(--text-secondary);
+  padding: 6px;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.iconButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.profileButton {
+  background-color: var(--accent-blue);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-glow);
+}

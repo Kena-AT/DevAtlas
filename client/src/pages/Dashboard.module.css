@@ -1,0 +1,233 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.verticalGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-xl);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.05);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent-blue);
+  margin-top: var(--spacing-md);
+}
+
+@media (max-width: 1024px) {
+  .twoColumn {
+    grid-template-columns: 1fr;
+  }
+}
+
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.actionButton {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.actionButton.primary {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.backendGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.categoryCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  backdrop-filter: blur(10px);
+}
+
+.catHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: var(--spacing-sm);
+}
+
+.catIcon {
+  color: var(--accent-purple);
+}
+
+.catTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.subGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.resourceItem {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  transition: transform var(--transition-fast);
+}
+
+.resourceItem:hover {
+  transform: translateX(4px);
+  border-color: var(--accent-purple);
+}
+
+.resourceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.resourceTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.versionTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.resourceDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.metricsCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.progressBar {
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  border-radius: 4px;
+}
+
+.tagGroup {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.statusBadge {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-green);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+

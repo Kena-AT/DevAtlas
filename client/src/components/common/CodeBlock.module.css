@@ -1,0 +1,52 @@
+.container {
+  background-color: #1e1e1e; /* Match VS Code dark */
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: var(--spacing-md) 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.filename {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+  transition: color var(--transition-fast);
+}
+
+.copyButton:hover {
+  color: var(--text-primary);
+}
+
+.codeWrapper {
+  position: relative;
+}
+
+.floatingCopy {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.floatingCopy:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

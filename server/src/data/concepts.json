@@ -1,0 +1,33 @@
+[
+  {
+    "id": "microservices",
+    "title": "Microservices Architecture",
+    "domain": "Backend",
+    "description": "Architectural pattern where an app is a collection of loosely coupled services.",
+    "fullDescription": "Microservices is an architectural style that structures an application as a collection of services that are highly maintainable and testable, loosely coupled, independently deployable, organized around business capabilities, and owned by a small team. It is the evolution of Service Oriented Architecture (SOA).",
+    "diagram": "graph TD\n  GW[API Gateway] --> S1[User Service]\n  GW --> S2[Order Service]\n  GW --> S3[Payment Service]\n  S1 --> DB1[(Postgres)]\n  S2 --> DB2[(MongoDB)]\n  S3 --> DB3[(Redis)]",
+    "codeSnippet": "// Basic Express Microservice\nconst express = require('express');\nconst app = express();\n\napp.get('/health', (req, res) => res.status(200).send('OK'));\n\nconst PORT = process.env.PORT || 3001;\napp.listen(PORT, () => console.log(`Service running on port ${PORT}`));",
+    "language": "javascript",
+    "filename": "server.js",
+    "bestPractices": [
+      "Design for failure: implement circuit breakers.",
+      "Use distributed tracing (e.g., Jaeger) for observability.",
+      "Maintain data sovereignty: one database per service."
+    ]
+  },
+  {
+    "id": "react-hooks",
+    "title": "React Hooks",
+    "domain": "Frontend",
+    "description": "Functions that let you hook into React state and lifecycle.",
+    "fullDescription": "Hooks are a relatively new addition in React 16.8. They let you use state and other React features without writing a class. They provide a more direct way to use the React features you already know — props, state, context, refs, and lifecycle.",
+    "codeSnippet": "import React, { useState, useEffect } from 'react';\n\nfunction Example() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `You clicked ${count} times`;\n  });\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>Increment</button>\n    </div>\n  );\n}",
+    "language": "jsx",
+    "filename": "Example.jsx",
+    "bestPractices": [
+      "Only call Hooks at the top level.",
+      "Only call Hooks from React function components or custom Hooks.",
+      "Use ESLint plugin for Hooks."
+    ]
+  }
+]
