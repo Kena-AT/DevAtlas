@@ -22,7 +22,7 @@ DevAtlas is a web-based educational reference app that centralizes modern softwa
 ### Prerequisites
 
 - Node.js (v18+)
-- PostgreSQL (optional)
+- PostgreSQL
 
 ### Installation
 
